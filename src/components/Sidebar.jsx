@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Self from '../assets/Self.jpeg'
 
 const Container = styled.div`
-    height 48rem;
     display: flex;
     justify-content: center;
 `;
