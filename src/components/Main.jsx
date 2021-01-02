@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 import Sidebar from './Sidebar'
 import About from './About'
+import Education from './Education'
 
 
 const Whole = styled.div`
-    width: 100%;
     display: flex;
     justify-content: flex-start;
 `;
@@ -20,8 +20,15 @@ const Side = styled.div`
 `;
 
 const MainContent = styled.div`
-    width: 80%;
+    position: relative;
+    margin-left: 20%;
     margin-top: 13rem;
+`;
+
+const PageBreak = styled.header`
+    height: .05rem;
+    width: 130%;
+    background-color: grey;
 `;
 
 export default function Main() {
@@ -33,6 +40,8 @@ export default function Main() {
                 </Side>
                 <MainContent>
                     <About />
+                    <PageBreak />
+                    <Education />
                 </MainContent>
             </Whole>
         </div>

@@ -5,12 +5,14 @@ import styled from 'styled-components'
 const Container = styled.div`
     display: flex;
     justify-content: center;
+    height: 34.5rem;
+    margin-left: 7rem;
 `;
 
 const SubContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 `;
 
 const Title = styled.div`
@@ -20,6 +22,10 @@ const Title = styled.div`
 const Color = styled.span`
     color: grey;
     text-shadow: 1px 1px black;
+`;
+
+const Color2 = styled(Color)`
+    text-shadow: .5px .5px black;
 `;
 
 const Location = styled.span`
@@ -34,12 +40,18 @@ const ImgCircle = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 3rem;
 `;
 
 const ImgDiv = styled.div`
     margin-top: 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+`;
+
+const Bio = styled.div`
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 `;
 
 export default function About() {
@@ -47,8 +59,10 @@ export default function About() {
     let firstName = 'ANDREW '
     let lastName = 'FLEMING'
 
-    let location = 'New York, US · (518) 364 - 4592' 
+    let location = 'New York, US · (518) 364 - 4592 · ' 
     let email = 'Fleming-Andrew@protonmail.com'
+
+    let quickBio = "I'm a brand new developer excited to better my craft. My tech stack includes React, Node, Solidity, Truffle, and Web3."
 
     let linkedinIcon = <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-linkedin" viewBox="0 0 16 16">
         <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
@@ -76,16 +90,19 @@ export default function About() {
             </Title>
 
                 <Location>
-                    {location} 
-                    <div>
-                        {email}
-                    </div>
+                    { location } 
+                    <Color2>
+                        { email }
+                    </Color2>
+                    </Location>
+                    <Bio>
+                        { quickBio }
+                    </Bio>
                     <ImgDiv>
                         <ImgCircle> { githubIcon } </ImgCircle>
                         <ImgCircle> { linkedinIcon } </ImgCircle>
                         <ImgCircle> { twitterIcon } </ImgCircle>
                     </ImgDiv>
-                </Location>
             </SubContainer>
         </Container>
     )
