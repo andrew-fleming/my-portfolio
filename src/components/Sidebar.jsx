@@ -48,10 +48,7 @@ export default function Sidebar() {
             <SectionContainer>
                 <Div>
                   About
-                </Div>  
-                <Div>
-                    Education
-                </Div>     
+                </Div>       
                 <Div>
                     Skills
                 </Div>
@@ -60,6 +57,9 @@ export default function Sidebar() {
                 </Div>
                 <Div>
                     Certifications
+                </Div>
+                <Div>
+                    Education
                 </Div>
             </SectionContainer>
             </div>

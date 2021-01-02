@@ -80,21 +80,19 @@ export default function About() {
     return (
         <Container>
             <SubContainer>
-            <Title>
-
-                {firstName} 
-                <Color>
-                {lastName}
-                </Color>
-
-            </Title>
+                <Title>
+                    {firstName} 
+                    <Color>
+                        {lastName}
+                    </Color>
+                </Title>
 
                 <Location>
                     { location } 
                     <Color2>
                         { email }
                     </Color2>
-                    </Location>
+                </Location>
                     <Bio>
                         { quickBio }
                     </Bio>
