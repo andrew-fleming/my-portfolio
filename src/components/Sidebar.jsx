@@ -59,6 +59,9 @@ export default function Sidebar() {
                     Certifications
                 </Div>
                 <Div>
+                    Interests
+                </Div>
+                <Div>
                     Education
                 </Div>
             </SectionContainer>

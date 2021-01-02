@@ -5,7 +5,7 @@ const Container = styled.div`
     margin-top: 5rem;
     margin-left: 7rem;
     height: 42.8rem;
-    width: 100%;
+    width: 100%; 
 `;
 
 const Title = styled.div`
@@ -14,11 +14,11 @@ const Title = styled.div`
     background-color: #e5e500;
 `;
 
-export default function Projects() {
+export default function Interests() {
     return (
         <Container>
             <Title>
-                Projects
+                Interests
             </Title>
         </Container>
     )

@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import Sidebar from './Sidebar'
 import About from './About'
 import Skills from './Skills'
+import Projects from './Projects'
+import Certifications from './Certifications'
+import Interests from './Interests'
 import Education from './Education'
 
 
@@ -43,6 +46,12 @@ export default function Main() {
                     <About />
                     <PageBreak />
                     <Skills />
+                    <PageBreak />
+                    <Projects />
+                    <PageBreak />
+                    <Certifications />
+                    <PageBreak />
+                    <Interests />
                     <PageBreak />
                     <Education />
                 </MainContent>
