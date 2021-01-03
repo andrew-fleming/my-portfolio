@@ -11,6 +11,7 @@ import Education from './Education'
 
 
 const Whole = styled.div`
+    position: absolute;
     display: flex;
     justify-content: flex-start;
 `;
@@ -24,14 +25,14 @@ const Side = styled.div`
 `;
 
 const MainContent = styled.div`
-    position: relative;
-    margin-left: 20%;
+    position: static;
+    padding-left: 20%;
     margin-top: 13rem;
 `;
 
 const PageBreak = styled.header`
     height: .05rem;
-    width: 130%;
+    width: 100%;
     background-color: grey;
 `;
 

@@ -12,9 +12,9 @@ import openzeppelin from '../assets/openzeppelin.svg'
 
 const Container = styled.div`
     margin-top: 5rem;
-    margin-left: 7rem;
+    padding-left: 7rem;
     height: 42.8rem;
-    width: 100%;
+    width: 80%;
 `;
 
 const Title = styled.div`

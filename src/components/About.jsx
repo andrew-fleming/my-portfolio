@@ -6,7 +6,8 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     height: 34.5rem;
-    margin-left: 7rem;
+    padding-left: 2rem;
+    width: 80%;
 `;
 
 const SubContainer = styled.div`
