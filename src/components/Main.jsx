@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components'
 
 import Sidebar from './Sidebar'
@@ -36,25 +36,67 @@ const PageBreak = styled.header`
     background-color: grey;
 `;
 
+
 export default function Main() {
+
+    const aboutRef = useRef(null)
+    const skillsRef = useRef(null)
+    const projectsRef = useRef(null)
+    const certificationsRef = useRef(null)
+    const interestsRef = useRef(null)
+    const educationRef = useRef(null)
+
+
+    const handleAbout = () => {
+        aboutRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    const handleSkills = () => {
+        skillsRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    const handleProjects = () => {
+        projectsRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    const handleCertifications = () => {
+        certificationsRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    const handleInterests = () => {
+        interestsRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    const handleEducation = () => {
+        educationRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
+
+
     return (
         <div>
             <Whole>
                 <Side>
-                    <Sidebar/>
+                    <Sidebar 
+                        handleAbout={handleAbout} 
+                        handleSkills={handleSkills}
+                        handleProjects={handleProjects}
+                        handleCertifications={handleCertifications}
+                        handleInterests={handleInterests}
+                        handleEducation={handleEducation}
+                    />
                 </Side>
                 <MainContent>
-                    <About />
+                    <About aboutRef={aboutRef}/>
                     <PageBreak />
-                    <Skills />
+                    <Skills skillsRef={skillsRef}/>
                     <PageBreak />
-                    <Projects />
+                    <Projects projectsRef={projectsRef}/>
                     <PageBreak />
-                    <Certifications />
+                    <Certifications certificationsRef={certificationsRef}/>
                     <PageBreak />
-                    <Interests />
+                    <Interests interestsRef={interestsRef}/>
                     <PageBreak />
-                    <Education />
+                    <Education educationRef={educationRef}/>
                 </MainContent>
             </Whole>
         </div>

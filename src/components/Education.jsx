@@ -26,7 +26,7 @@ const Color = styled.div`
     text-shadow: .5px .5px black;
 `;
 
-export default function Education() {
+export default function Education(props) {
 
     const func = (school, year, city, degree) => {
         return(
@@ -48,7 +48,7 @@ export default function Education() {
     
 
     return (
-        <Container>
+        <Container ref={props.educationRef}>
             <Title>
                 Education
             </Title>

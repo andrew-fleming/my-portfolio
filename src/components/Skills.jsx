@@ -58,12 +58,12 @@ const ImgCSS = styled(Img)`
     width: 4rem;
 `;
 
-export default function Skills() {
+export default function Skills(props) {
 
     let tools = 'Programming Languages & Tools'
 
     return (
-        <Container>
+        <Container ref={props.skillsRef}>
             <Title>
                 Skills
             </Title>

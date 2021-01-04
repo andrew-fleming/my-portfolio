@@ -38,7 +38,7 @@ const Img = styled.img`
     width: 1.5rem;
 `;
 
-export default function Certifications() {
+export default function Certifications(props) {
 
     const func = (course, date) => {
         return(
@@ -57,7 +57,7 @@ export default function Certifications() {
 
 
     return (
-        <Container>
+        <Container ref={props.certificationsRef}>
             <Title>
                 Certifications
             </Title>

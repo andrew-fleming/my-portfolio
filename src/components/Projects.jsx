@@ -29,9 +29,9 @@ const Img = styled.img`
     margin-bottom: 4rem;
 `;
 
-export default function Projects() {
+export default function Projects(props) {
     return (
-        <Container>
+        <Container ref={props.projectsRef}>
             <Title>
                 Projects
             </Title>

@@ -18,7 +18,6 @@ const Circle = styled.div`
 `;
 
 const SectionContainer = styled.div`
-    color: white;
     margin-top: 1.5rem;
     display: flex;
     align-items: center;
@@ -26,8 +25,14 @@ const SectionContainer = styled.div`
     font-size: 1.3rem;
 `;
 
-const Div = styled.div`
+const Section = styled.div`
     margin-top: .5rem;
+    color: white;
+
+    : hover {
+        cursor: pointer;
+        color: #e5e500;
+    }
 `;
 
 const Img = styled.img`
@@ -38,32 +43,37 @@ const Img = styled.img`
 
 
 
-export default function Sidebar() {
+export default function Sidebar(props) {
+
+    
+    
+
+
     return (
         <Container>
             <div>
             <Circle>
-                <Img src={Self} alt='Me smiling in Mexico'/>
+                <Img src={ Self } alt='Me smiling in Mexico'/>
             </Circle>
             <SectionContainer>
-                <Div>
-                  About
-                </Div>       
-                <Div>
+                <Section onClick={props.handleAbout}>
+                    About
+                </Section>       
+                <Section onClick={props.handleSkills}>
                     Skills
-                </Div>
-                <Div>
+                </Section>
+                <Section onClick={props.handleProjects}>
                     Projects
-                </Div>
-                <Div>
+                </Section>
+                <Section onClick={props.handleCertifications}>
                     Certifications
-                </Div>
-                <Div>
+                </Section>
+                <Section onClick={props.handleInterests}>
                     Interests
-                </Div>
-                <Div>
+                </Section>
+                <Section onClick={props.handleEducation}>
                     Education
-                </Div>
+                </Section>
             </SectionContainer>
             </div>
         </Container>

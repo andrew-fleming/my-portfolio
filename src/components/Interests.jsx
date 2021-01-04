@@ -17,7 +17,7 @@ const Title = styled.div`
 const P = styled.p`
 `;
 
-export default function Interests() {
+export default function Interests(props) {
 
     let content = "I spend much of my time reading and writing when I'm not programming. My preferred genres of fiction include transgressive, minimalism, hyper-realism, and absurdism--the perfect book would be if Chuck Palahniuk had a baby with Amy Hempel and it was raised by Kafka and Kurt Vonnegut was the crazy uncle. My nonfiction interests constist of philosophy, economics, and history. Thinkers I especially admire are Jeffrey Tucker, Murray Rothbard, Ayn Rand, Christopher Hitchens, and Larken Rose."
 
@@ -25,7 +25,7 @@ export default function Interests() {
 
 
     return (
-        <Container>
+        <Container ref={props.interestsRef}>
             <Title>
                 Interests
             </Title>
