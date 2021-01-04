@@ -86,17 +86,17 @@ export default function About(props) {
 
     const handleGit = (e) => {
         e.preventDefault()
-        window.open('https://github.com/andrew-fleming')
+        window.open(window.location.replace('https://github.com/andrew-fleming'))
     }
 
     const handleLinked = (e) => {
         e.preventDefault()
-        window.open('https://linkedin.com/in/andrew-fleming-7515ab1b4/')
+        window.open(window.location.replace('https://linkedin.com/in/andrew-fleming-7515ab1b4/'))
     }
 
     const handleTwitter = (e) => {
         e.preventDefault()
-        window.open('https://twitter.com/_andrew_fleming')
+        window.open(window.location.replace('https://twitter.com/_andrew_fleming'))
     }
 
 
