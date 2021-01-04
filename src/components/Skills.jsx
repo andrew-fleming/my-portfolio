@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import html5 from '../assets/html5.png'
-import css3 from '../assets/css3.png'
 import js from '../assets/js.png'
 import solidity from '../assets/solidity.svg'
 import truffle from '../assets/truffle.svg'
@@ -35,27 +33,17 @@ const Icons = styled.div`
 
 const Img = styled.img`
     margin-right: 2rem;
-    height: 3rem;
-    width: 3rem;
+    height: 4rem;
+    width: 4rem;
 `;
 
 const Img2 = styled(Img)`
-    height: 5rem;
-    width: 3.8rem;
+    height: 6.3rem;
+    width: 4.5rem;
 `;
 
 const Img3 = styled(Img2)`
-    width: 10rem;
-`;
-
-const ImgHTML = styled(Img)`
-    height: 4.8rem;
-    width: 4.8rem;
-`;
-
-const ImgCSS = styled(Img)`
-    height: 4rem;
-    width: 4rem;
+    width: 14rem;
 `;
 
 export default function Skills(props) {
@@ -71,8 +59,6 @@ export default function Skills(props) {
                 { tools }
             </Subtitle>
             <Icons>
-                <ImgHTML src={ html5 } alt='HTML5 logo' />
-                <ImgCSS src={ css3 } alt='CSS3 logo' />
                 <Img src={ js } alt='JaveScript logo' />
                 <Img src={ solidity } alt='Solidity logo'/>
                 <Img src={ truffle } alt='Truffle logo' />
