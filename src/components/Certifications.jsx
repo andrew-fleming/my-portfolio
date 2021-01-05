@@ -4,8 +4,8 @@ import styled from 'styled-components'
 import eth from '../assets/eth.svg'
 
 const Container = styled.div`
-    margin-top: 5rem;
-    margin-left: 7rem;
+    padding-top: 5rem;
+    padding-left: 7rem;
     height: 42.8rem;
     width: 80%; 
 `;
@@ -19,7 +19,8 @@ const Title = styled.div`
 const Subtitle = styled.div`
     color: grey;
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 4rem;
     text-shadow: .5px .5px black;
 `;
 
@@ -76,6 +77,7 @@ export default function Certifications(props) {
                 {func('Ethereum Smart Contract Programming 101', 'March 2020')}
                 {func('Ethereum Smart Contract Programming 201', 'October 2020')}
                 {func('Ethereum Smart Contract Security', 'April 2020')}
+                {func('DeFi 101', 'January 2021')}
             </Content>
 
         </Container>

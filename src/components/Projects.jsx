@@ -33,6 +33,11 @@ const Img = styled.img`
     height: 80%;
 `;
 
+const P = styled.p`
+    margin-left: 10%;
+    margin-right: 10%;
+`;
+
 const Ul = styled.ul`
     padding-left: 8rem;
     color: blue;
@@ -40,10 +45,10 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.li`
-    width: 15%;
+    width: 28%;
     :hover {
         color: yellow;
-        background-color: grey;
+        text-shadow: .6px .6px blue;
         cursor: pointer;
     }
 `;
@@ -96,6 +101,11 @@ export default function Projects(props) {
         e.preventDefault()
     }
 
+    /**
+     * @notice The following variables are synopses of the projects I built
+     */
+
+    let coinflipSyn = 'The Coinflip dApp centers around the randomization question with blockchain; namely, how can you achieve randomness using a network that operates on proof? I programmed the contract to send a query to the Provable oracle (formerly known as Oraclize); wherein, the Provable protocol creates a random number off-chain and sends it back to the contract. The Coinflip contract then computes the modulus of the random number and "2" thus leaving a remainder of zero or one (heads or tails). '
 
     return (
         <Container ref={props.projectsRef}>
@@ -108,11 +118,14 @@ export default function Projects(props) {
             <AlignImg>
                 <Img src={ coinflip } alt='Coinflip application' />
             </AlignImg>
+            <P>
+                { coinflipSyn }
+            </P>
             <Ul>
+                <Li>Full Description and Examples</Li>
                 <Li onClick={ handleCoinCode } >Code</Li>
                 <Li>Demo Video</Li>
                 <Li onClick={ handleCoinApp } >Live Application</Li>
-                <Li>Writeup</Li>
             </Ul>
            
             <Subtitle>
