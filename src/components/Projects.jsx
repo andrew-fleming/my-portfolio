@@ -105,7 +105,9 @@ export default function Projects(props) {
      * @notice The following variables are synopses of the projects I built
      */
 
-    let coinflipSyn = 'The Coinflip dApp centers around the randomization question with blockchain; namely, how can you achieve randomness using a network that operates on proof? I programmed the contract to send a query to the Provable oracle (formerly known as Oraclize); wherein, the Provable protocol creates a random number off-chain and sends it back to the contract. The Coinflip contract then computes the modulus of the random number and "2" thus leaving a remainder of zero or one (heads or tails). '
+    let coinflipSyn = 'The Coinflip dApp centers around the randomization question with blockchain; namely, how can you achieve randomness using a network that operates on proof? The contract sends a query to the Provable oracle (formerly known as Oraclize); wherein, the Provable protocol creates a random number off-chain and sends it back to the contract. The Coinflip contract then computes the modulus of the random number and 2 thus leaving a remainder of 0 or 1 (heads or tails). '
+
+    let hodlFarmSyn = 'Hodl Farm explores deploying an ERC20 token (HodlToken) and rewarding it to users who lock up their Dai stablecoin--a process commonly referred to as "yield farming." The main difficulty in offering interest within the Ethereum network, be it a fixed percentage or compounding rate, rests in the gas fees. The Hodl Farm contract greatly mitigates the gas fee problem by utilizing the timestamp property in Ethereum transactions. Instead of paying out investors every block, day, epoch, etc., the contract maps the user to their yield and leaves it up to the user to claim funds with a single transaction. The contract\'s method simply subtracts the current timestamp by the initial timestamp when staked. Further, the contract divides the remainder by 60 thus reformatting the difference into minutes. As a proof of concept, the contract divides the difference by 100 giving the investor a 1% interest rate in Hodl Token per minute.'
 
     return (
         <Container ref={props.projectsRef}>
@@ -134,11 +136,14 @@ export default function Projects(props) {
             <AlignImg>
                 <Img src={ hodlfarm } alt='Hodl Farm application' />
             </AlignImg>
+            <P>
+                { hodlFarmSyn }
+            </P>
             <Ul>
+                <Li>Full Description and Examples</Li>
                 <Li onClick={ handleHodlCode } >Code</Li>
                 <Li>Demo Video</Li>
                 <Li onClick={ handleHodlApp } >Live Application</Li>
-                <Li>Writeup</Li>
             </Ul>
         </Container>
     )

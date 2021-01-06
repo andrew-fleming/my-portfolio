@@ -53,7 +53,7 @@ export default function Education(props) {
                 Education
             </Title>
             {func('Goddard College', '2012 - 2015', 'Plainfield, VT', 'BFA Creative Writing')}
-            {func('Sierra Nevada College', '2015 - 2017', 'Lake Tahoe, NV', 'MFA Creative Writing')}
+            {func('Sierra Nevada College', '2015 - 2017', 'Incline Village, NV', 'MFA Creative Writing')}
             
         </Container>
     )
