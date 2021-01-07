@@ -68,6 +68,7 @@ export default function Projects(props) {
 
     const handleCoinVideo = (e) => {
         e.preventDefault()
+        window.open(window.location.replace('https://www.youtube.com/watch?v=w3BJbm3zlz4'))
     }
 
     const handleCoinApp = (e) => {
@@ -75,6 +76,11 @@ export default function Projects(props) {
         window.open(window.location.replace('https://andrew-fleming.github.io/project-coinflip-v-6/'))
     }
 
+    /**
+     * @notice Fill this in later
+     * 
+     * @param {} e 
+     */
     const handleCoinWriteup = (e) => {
         e.preventDefault()
     }
@@ -90,6 +96,7 @@ export default function Projects(props) {
 
     const handleHodlVideo = (e) => {
         e.preventDefault()
+        window.open(window.location.replace('https://www.youtube.com/watch?v=s5KNYSMnbRk'))
     }
 
     const handleHodlApp = (e) => {
@@ -97,6 +104,10 @@ export default function Projects(props) {
         window.open(window.location.replace('https://andrew-fleming.github.io/yield-farm/'))
     }
 
+    /**
+     * @notice Fill this in later
+     * @param {} e 
+     */
     const handleHodlWriteup = (e) => {
         e.preventDefault()
     }
@@ -124,9 +135,8 @@ export default function Projects(props) {
                 { coinflipSyn }
             </P>
             <Ul>
-                <Li>Full Description and Examples</Li>
                 <Li onClick={ handleCoinCode } >Code</Li>
-                <Li>Demo Video</Li>
+                <Li onClick={ handleCoinVideo } >Demo Video</Li>
                 <Li onClick={ handleCoinApp } >Live Application</Li>
             </Ul>
            
@@ -140,9 +150,8 @@ export default function Projects(props) {
                 { hodlFarmSyn }
             </P>
             <Ul>
-                <Li>Full Description and Examples</Li>
                 <Li onClick={ handleHodlCode } >Code</Li>
-                <Li>Demo Video</Li>
+                <Li onClick={ handleHodlVideo } >Demo Video</Li>
                 <Li onClick={ handleHodlApp } >Live Application</Li>
             </Ul>
         </Container>
